@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Permutaciones sin Repeticion"
+        android:id="@+id/PSR" />
+    <Button
+        android:id="@+id/PCR"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Permutaciones con Repeticion" />
+    <Button
+        android:id="@+id/CSR"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Combinacion sin Repeticion" />
+    <Button
+        android:id="@+id/CCR"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Combinacion con Repeticion" />
+    <Button
+        android:id="@+id/VSR"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Variacion sin Repeticion" />
+    <Button
+        android:id="@+id/VCR"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Variacion con Repeticion" />
+    <Button
+        android:id="@+id/PC"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Permutacion Circular" />
+    <Button
+        android:id="@+id/RM"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Regla multiplicatia" />
+    <Button
+        android:id="@+id/RA"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Regla Aditiva" />
+</LinearLayout>
