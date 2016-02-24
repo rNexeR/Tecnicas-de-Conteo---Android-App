@@ -11,7 +11,7 @@ namespace Conteo
     [Activity(Label = "Tecnicas de Conteo", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : Activity
     {
-        int count = 1;
+        //int count = 1;
 
         protected override void OnCreate(Bundle bundle)
         {

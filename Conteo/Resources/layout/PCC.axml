@@ -4,6 +4,8 @@
     android:screenOrientation="portrait"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
     android:scrollbars="vertical">
     <LinearLayout
         android:orientation="horizontal"
@@ -26,24 +28,33 @@
         android:text="Agregar N"
         android:id="@+id/PCRAgregar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="225.5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:weightSum="1.0"
         android:id="@+id/linearLayout2">
         <TextView
             android:text="Elementos:"
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
             android:layout_height="match_parent"
-            android:background="@android:color/background_dark"
-            android:textColor="@android:color/background_light" />
+            android:background="@android:color/background_light"
+            android:textColor="@android:color/background_dark"
+            android:layout_marginRight="5dp" />
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/linearLayout3">
+            android:weightSum="1.0"
+            android:id="@+id/linearLayout3"
+            android:layout_weight="0.5">
             <TextView
                 android:text="N ="
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -66,12 +77,16 @@
         android:text="Calcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/PCRCalcular" />
     <TextView
         android:text="Resultado:"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
-        android:layout_height="81.0dp"
+        android:layout_height="52.5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/PCRResultado"
         android:visibility="invisible"
         android:textAlignment="center" />
