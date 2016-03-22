@@ -1,3 +1,6 @@
+/*
+    Codigo fuente obtenido de https://github.com/Raimmaster/DiscreteTechniques @raimmaster, Modificado para su uso en este proyecto.
+*/
 using System;
 using System.Collections.Generic;
 using System.Linq;
