@@ -41,31 +41,31 @@ namespace Conteo
             };
 
             CSR.Click += delegate {
-
+                StartActivity(typeof(CSR));
             };
 
             CCR.Click += delegate {
-
+                StartActivity(typeof(CCR));
             };
 
             VSR.Click += delegate {
-
+                StartActivity(typeof(VSR));
             };
 
             VCR.Click += delegate {
-
+                StartActivity(typeof(VCR));
             };
 
             PC.Click += delegate {
-
+                StartActivity(typeof(PC));
             };
 
             RM.Click += delegate {
-
+                StartActivity(typeof(Multiplicativa));
             };
 
             RA.Click += delegate {
-
+                StartActivity(typeof(Aditiva));
             };
 
         }

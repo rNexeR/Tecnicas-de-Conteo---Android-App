@@ -30,6 +30,7 @@ namespace Conteo
             {
                 result.Text = "Resultado: " + Tecnicas.TecnicasConteo.permutacionSinRepeticion(Convert.ToDouble(n.Text));
                 result.Visibility = ViewStates.Visible;
+                n.Text = "";
             };
         }
     }

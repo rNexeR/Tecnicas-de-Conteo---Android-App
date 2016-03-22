@@ -19,10 +19,21 @@ namespace Conteo
         {
             base.OnCreate(savedInstanceState);
 
-            //SetContentView(Resource.Layout.PSC);
+            SetContentView(Resource.Layout.CSR);
 
             // Create your application here
+            Button calc = FindViewById<Button>(Resource.Id.csr_calcular);
+            EditText n = FindViewById<EditText>(Resource.Id.csr_n);
+            EditText m = FindViewById<EditText>(Resource.Id.csr_m);
+            TextView result = FindViewById<TextView>(Resource.Id.csr_resultado);
 
+            calc.Click += delegate
+            {
+                result.Text = "Resultado: " + Tecnicas.TecnicasConteo.combinacionSinRepeticion(Convert.ToDouble(n.Text), Convert.ToDouble(m.Text));
+                result.Visibility = ViewStates.Visible;
+                n.Text = "";
+                m.Text = "";
+            };
         }
     }
 }

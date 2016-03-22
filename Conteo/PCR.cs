@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using Android.Text.Method;
 
 namespace Conteo
 {
@@ -20,7 +21,7 @@ namespace Conteo
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.PCC);
+            SetContentView(Resource.Layout.PCR);
 
             Button agregar = FindViewById<Button>(Resource.Id.PCRAgregar);
             Button Calcular = FindViewById<Button>(Resource.Id.PCRCalcular);
@@ -31,8 +32,7 @@ namespace Conteo
             TextView NTotal = FindViewById<TextView>(Resource.Id.NTotal);
             TextView result = FindViewById<TextView>(Resource.Id.PCRResultado);
             List<Double> conjunto = new List<double>();
-
-
+            
             Double n = 0;
 
             var metrics = Resources.DisplayMetrics;
@@ -42,11 +42,16 @@ namespace Conteo
 
              agregar.Click += delegate
             {
-                Double x = Convert.ToDouble(nTemp.Text);
-                conjunto.Add(x);
-                list.Text += "\n  " + x;
-                n += x;
-                NTotal.Text = "N = " + n;
+                if(nTemp.Text != "")
+                {
+                    Double x = Convert.ToDouble(nTemp.Text);
+                    nTemp.Text = "";
+                    conjunto.Add(x);
+                    list.Text += "\n  " + x;
+                    n += x;
+                    NTotal.Text = "N = " + n;
+                }
+                
             };
 
             BorrarU.Click += delegate
@@ -75,6 +80,8 @@ namespace Conteo
 
             Calcular.Click += delegate
             {
+                if (conjunto.Count() == 0)
+                    return;
                 result.Text = "Resultado: " + Tecnicas.TecnicasConteo.permutacionConRepeticion(n, conjunto);
                 result.Visibility = ViewStates.Visible;
             };
